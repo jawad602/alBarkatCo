@@ -3,7 +3,7 @@
 
 <head>
     <link rel="profile" href="https://gmpg.org/xfn/11">
-	<title>إصلاح الغسالة وصيانتها</title>
+	<title>إصلاح وصيانة الألومنيوم</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,9 +21,12 @@
     <meta name="title" content=" صيانة غسالة دايو اتوماتيك">
     <meta name="title" content="شركة صيانة">
     <meta name="title" content="التدفئة والتهوية وتكييف الهواء">
-    <meta name="title" content="تصليح مكيف سبليت">
-    <meta name="title" content="تصليح الثلاجات">
-    <meta name="title" content="تصليح الغسالة   ">
+    <meta name="title" content="إصلاح نافذة الألومنيوم">
+    <meta name="title" content="إصلاح الباب الألومنيومي">
+    <meta name="title" content="إصلاح الألومنيوم">
+    <meta name="title" content="aluminum window repair">
+    <meta name="title" content="aluminum door repair">
+    <meta name="title" content="aluminum repairs">
 
     <link rel="stylesheet" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&display=swap"
@@ -34,10 +37,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
     <script src="/js/custom.js"></script>
+    <script src="js/jquery.js"></script>
 </head>
 
 <body>
-    <div class="main-container">
+    <!-- <div id="langToggleButton">
+        <button id="toggleButton">Engllish</button>
+    </div> -->
+    <div id="upper-container" class="main-container">
             <header>
                 <div class="inner-container header-content">
                     <h1 class="logo">
@@ -55,17 +62,18 @@
                         <li><a href="#service">الخدمة</a></li>
                         <li><a href="#about">الاتصال</a></li>
                         <li><a href="#contact">حول</a></li>
+                        <li><a class="toggleButton">English</a></li>
             
                         <!-- <span class="seperator desktop-none"></span> -->
             
-                        <!-- <li class="desktop-none lang-item" [ngClass]="{'lang-active': selectedOption == 'en'}" (click)="mobileSwitchLanguage('en')">
+                        <!-- <li class="desktop-none lang-item">
                             <a>
                                 English
             
                                 <i class="fa fa-check"></i>
                             </a>
                         </li>
-                        <li class="desktop-none lang-item" [ngClass]="{'lang-active': selectedOption == 'ar'}" (click)="mobileSwitchLanguage('ar')">
+                        <li class="desktop-none lang-item">
                             <a>
                                 Arabic
             
@@ -99,7 +107,7 @@
                             <h2>خدمة تركيب أبواب الألمنيوم المحترفة</h2>
 
                             <a href="tel:+96555133297" class="button">
-                                <i class='fa fa-phone' style="font-size:20"></i>
+                                <img width="35" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEElEQVR4nO3ZzYtNYRzA8Z/XUWJDGKJk5WUpWUrsyEYUNanBn6D8BbLDCv+BxcR4jSxQkxoLRnmLImXl5UZIqI9OcxY3Zu7c59zuuc9kPn/B/fac+5zn+Z2IGTN6B3swii94gK0xnWAezvpXA6tiOsAiXDe5a5E7rMQTUxuIXGE5XmjPJ/RHbjAfI9IMR25wXDUHIyd4UzHkA1ZELvBVdUORC7zUmf2RAwx1GPI8coCjHYZ8jxxgGX53EHI/coHbHYQM5HbSreIRZkcuMAtjFUJ2Rm6wLzHicuTI+KrcSwgZjFxhI34mnILXRa5wMmFVHmJh5Ah95Q9sV7F190WOsAHfEmIuYm7kCEekOV9sGJEjE09TWjkVGY+G7iTGnM5yZYwPJl5VeMzmRG6wBm8TYy5hQeQGm/AxMebmRO+ZYrVwqBzF/sKz4ohUZ8yWchacYqz5BIDtLd5TV4pBYV0xO/AjMaY4zgziapvTmQN13l9SY1T4j/XXEbOtwmOWqlHMFOqI2Yz3uu8GVtdx9H9XQ0yj2Gy6HbO2wkuzitGuhjSNlVJumFV87npI0yeKc10MGaklpCnocOJ9pl27ag0pY9Yn3jSncqb2iL+uzScSBhqttt/e30DLLfquah5jcWQ2N9ub+Lg9Le5DkaMyaDdulUf4yRRb+dKYDrCkPBVfKD4YlZ8BX+NYcc3u9e+b8d/6A8BzVur0abPMAAAAAElFTkSuQmCC">
                                 +96555133297
                             </a>
                         </div>
@@ -110,7 +118,7 @@
                             <h2>خدمة تركيب نوافذ الألمنيوم المحترفة</h2>
 
                             <a href="tel:+96555133297" class="button">
-                                <i class='fa fa-phone' style="font-size:20"></i>
+                                <img width="35" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEElEQVR4nO3ZzYtNYRzA8Z/XUWJDGKJk5WUpWUrsyEYUNanBn6D8BbLDCv+BxcR4jSxQkxoLRnmLImXl5UZIqI9OcxY3Zu7c59zuuc9kPn/B/fac+5zn+Z2IGTN6B3swii94gK0xnWAezvpXA6tiOsAiXDe5a5E7rMQTUxuIXGE5XmjPJ/RHbjAfI9IMR25wXDUHIyd4UzHkA1ZELvBVdUORC7zUmf2RAwx1GPI8coCjHYZ8jxxgGX53EHI/coHbHYQM5HbSreIRZkcuMAtjFUJ2Rm6wLzHicuTI+KrcSwgZjFxhI34mnILXRa5wMmFVHmJh5Ah95Q9sV7F190WOsAHfEmIuYm7kCEekOV9sGJEjE09TWjkVGY+G7iTGnM5yZYwPJl5VeMzmRG6wBm8TYy5hQeQGm/AxMebmRO+ZYrVwqBzF/sKz4ohUZ8yWchacYqz5BIDtLd5TV4pBYV0xO/AjMaY4zgziapvTmQN13l9SY1T4j/XXEbOtwmOWqlHMFOqI2Yz3uu8GVtdx9H9XQ0yj2Gy6HbO2wkuzitGuhjSNlVJumFV87npI0yeKc10MGaklpCnocOJ9pl27ag0pY9Yn3jSncqb2iL+uzScSBhqttt/e30DLLfquah5jcWQ2N9ub+Lg9Le5DkaMyaDdulUf4yRRb+dKYDrCkPBVfKD4YlZ8BX+NYcc3u9e+b8d/6A8BzVur0abPMAAAAAElFTkSuQmCC">
                                 +96555133297
                             </a>
                         </div>
@@ -121,7 +129,7 @@
                             <h2>خدمة تركيب حواجز الألمنيوم المحترفة</h2>
 
                             <a href="tel:+96555133297" class="button">
-                                <i class='fa fa-phone' style="font-size:20"></i>
+                                <img width="35" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEElEQVR4nO3ZzYtNYRzA8Z/XUWJDGKJk5WUpWUrsyEYUNanBn6D8BbLDCv+BxcR4jSxQkxoLRnmLImXl5UZIqI9OcxY3Zu7c59zuuc9kPn/B/fac+5zn+Z2IGTN6B3swii94gK0xnWAezvpXA6tiOsAiXDe5a5E7rMQTUxuIXGE5XmjPJ/RHbjAfI9IMR25wXDUHIyd4UzHkA1ZELvBVdUORC7zUmf2RAwx1GPI8coCjHYZ8jxxgGX53EHI/coHbHYQM5HbSreIRZkcuMAtjFUJ2Rm6wLzHicuTI+KrcSwgZjFxhI34mnILXRa5wMmFVHmJh5Ah95Q9sV7F190WOsAHfEmIuYm7kCEekOV9sGJEjE09TWjkVGY+G7iTGnM5yZYwPJl5VeMzmRG6wBm8TYy5hQeQGm/AxMebmRO+ZYrVwqBzF/sKz4ohUZ8yWchacYqz5BIDtLd5TV4pBYV0xO/AjMaY4zgziapvTmQN13l9SY1T4j/XXEbOtwmOWqlHMFOqI2Yz3uu8GVtdx9H9XQ0yj2Gy6HbO2wkuzitGuhjSNlVJumFV87npI0yeKc10MGaklpCnocOJ9pl27ag0pY9Yn3jSncqb2iL+uzScSBhqttt/e30DLLfquah5jcWQ2N9ub+Lg9Le5DkaMyaDdulUf4yRRb+dKYDrCkPBVfKD4YlZ8BX+NYcc3u9e+b8d/6A8BzVur0abPMAAAAAElFTkSuQmCC">
                                 +96555133297
                             </a>
                         </div>
@@ -132,7 +140,7 @@
                             <h2>خدمة تصميم المطابخ الألمنيوم المحترفة</h2>
 
                             <a href="tel:+96555133297" class="button">
-                                <i class='fa fa-phone' style="font-size:20"></i>
+                                <img width="35" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEElEQVR4nO3ZzYtNYRzA8Z/XUWJDGKJk5WUpWUrsyEYUNanBn6D8BbLDCv+BxcR4jSxQkxoLRnmLImXl5UZIqI9OcxY3Zu7c59zuuc9kPn/B/fac+5zn+Z2IGTN6B3swii94gK0xnWAezvpXA6tiOsAiXDe5a5E7rMQTUxuIXGE5XmjPJ/RHbjAfI9IMR25wXDUHIyd4UzHkA1ZELvBVdUORC7zUmf2RAwx1GPI8coCjHYZ8jxxgGX53EHI/coHbHYQM5HbSreIRZkcuMAtjFUJ2Rm6wLzHicuTI+KrcSwgZjFxhI34mnILXRa5wMmFVHmJh5Ah95Q9sV7F190WOsAHfEmIuYm7kCEekOV9sGJEjE09TWjkVGY+G7iTGnM5yZYwPJl5VeMzmRG6wBm8TYy5hQeQGm/AxMebmRO+ZYrVwqBzF/sKz4ohUZ8yWchacYqz5BIDtLd5TV4pBYV0xO/AjMaY4zgziapvTmQN13l9SY1T4j/XXEbOtwmOWqlHMFOqI2Yz3uu8GVtdx9H9XQ0yj2Gy6HbO2wkuzitGuhjSNlVJumFV87npI0yeKc10MGaklpCnocOJ9pl27ag0pY9Yn3jSncqb2iL+uzScSBhqttt/e30DLLfquah5jcWQ2N9ub+Lg9Le5DkaMyaDdulUf4yRRb+dKYDrCkPBVfKD4YlZ8BX+NYcc3u9e+b8d/6A8BzVur0abPMAAAAAElFTkSuQmCC">
                                 +96555133297
                             </a>
                         </div>
@@ -143,7 +151,7 @@
                             <h2>خدمة الستائر الألمنيوم المحترفة</h2>
 
                             <a href="tel:+96555133297" class="button">
-                                <i class='fa fa-phone' style="font-size:20"></i>
+                                <img width="35" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEElEQVR4nO3ZzYtNYRzA8Z/XUWJDGKJk5WUpWUrsyEYUNanBn6D8BbLDCv+BxcR4jSxQkxoLRnmLImXl5UZIqI9OcxY3Zu7c59zuuc9kPn/B/fac+5zn+Z2IGTN6B3swii94gK0xnWAezvpXA6tiOsAiXDe5a5E7rMQTUxuIXGE5XmjPJ/RHbjAfI9IMR25wXDUHIyd4UzHkA1ZELvBVdUORC7zUmf2RAwx1GPI8coCjHYZ8jxxgGX53EHI/coHbHYQM5HbSreIRZkcuMAtjFUJ2Rm6wLzHicuTI+KrcSwgZjFxhI34mnILXRa5wMmFVHmJh5Ah95Q9sV7F190WOsAHfEmIuYm7kCEekOV9sGJEjE09TWjkVGY+G7iTGnM5yZYwPJl5VeMzmRG6wBm8TYy5hQeQGm/AxMebmRO+ZYrVwqBzF/sKz4ohUZ8yWchacYqz5BIDtLd5TV4pBYV0xO/AjMaY4zgziapvTmQN13l9SY1T4j/XXEbOtwmOWqlHMFOqI2Yz3uu8GVtdx9H9XQ0yj2Gy6HbO2wkuzitGuhjSNlVJumFV87npI0yeKc10MGaklpCnocOJ9pl27ag0pY9Yn3jSncqb2iL+uzScSBhqttt/e30DLLfquah5jcWQ2N9ub+Lg9Le5DkaMyaDdulUf4yRRb+dKYDrCkPBVfKD4YlZ8BX+NYcc3u9e+b8d/6A8BzVur0abPMAAAAAElFTkSuQmCC">
                                 +96555133297
                             </a>
                         </div>
@@ -154,7 +162,7 @@
                             <h2>أبواب الألمنيوم ذات الحركة المزدوجة المحترفة</h2>
 
                             <a href="tel:+96555133297" class="button">
-                                <i class='fa fa-phone' style="font-size:20"></i>
+                                <img width="35" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEElEQVR4nO3ZzYtNYRzA8Z/XUWJDGKJk5WUpWUrsyEYUNanBn6D8BbLDCv+BxcR4jSxQkxoLRnmLImXl5UZIqI9OcxY3Zu7c59zuuc9kPn/B/fac+5zn+Z2IGTN6B3swii94gK0xnWAezvpXA6tiOsAiXDe5a5E7rMQTUxuIXGE5XmjPJ/RHbjAfI9IMR25wXDUHIyd4UzHkA1ZELvBVdUORC7zUmf2RAwx1GPI8coCjHYZ8jxxgGX53EHI/coHbHYQM5HbSreIRZkcuMAtjFUJ2Rm6wLzHicuTI+KrcSwgZjFxhI34mnILXRa5wMmFVHmJh5Ah95Q9sV7F190WOsAHfEmIuYm7kCEekOV9sGJEjE09TWjkVGY+G7iTGnM5yZYwPJl5VeMzmRG6wBm8TYy5hQeQGm/AxMebmRO+ZYrVwqBzF/sKz4ohUZ8yWchacYqz5BIDtLd5TV4pBYV0xO/AjMaY4zgziapvTmQN13l9SY1T4j/XXEbOtwmOWqlHMFOqI2Yz3uu8GVtdx9H9XQ0yj2Gy6HbO2wkuzitGuhjSNlVJumFV87npI0yeKc10MGaklpCnocOJ9pl27ag0pY9Yn3jSncqb2iL+uzScSBhqttt/e30DLLfquah5jcWQ2N9ub+Lg9Le5DkaMyaDdulUf4yRRb+dKYDrCkPBVfKD4YlZ8BX+NYcc3u9e+b8d/6A8BzVur0abPMAAAAAElFTkSuQmCC">
                                 +96555133297
                             </a>
                         </div>
@@ -165,7 +173,7 @@
                             <h2>خدمة الشبوك الألمنيوم المحترفة</h2>
 
                             <a href="tel:+96555133297" class="button">
-                                <i class='fa fa-phone' style="font-size:20"></i>
+                                <img width="35" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEElEQVR4nO3ZzYtNYRzA8Z/XUWJDGKJk5WUpWUrsyEYUNanBn6D8BbLDCv+BxcR4jSxQkxoLRnmLImXl5UZIqI9OcxY3Zu7c59zuuc9kPn/B/fac+5zn+Z2IGTN6B3swii94gK0xnWAezvpXA6tiOsAiXDe5a5E7rMQTUxuIXGE5XmjPJ/RHbjAfI9IMR25wXDUHIyd4UzHkA1ZELvBVdUORC7zUmf2RAwx1GPI8coCjHYZ8jxxgGX53EHI/coHbHYQM5HbSreIRZkcuMAtjFUJ2Rm6wLzHicuTI+KrcSwgZjFxhI34mnILXRa5wMmFVHmJh5Ah95Q9sV7F190WOsAHfEmIuYm7kCEekOV9sGJEjE09TWjkVGY+G7iTGnM5yZYwPJl5VeMzmRG6wBm8TYy5hQeQGm/AxMebmRO+ZYrVwqBzF/sKz4ohUZ8yWchacYqz5BIDtLd5TV4pBYV0xO/AjMaY4zgziapvTmQN13l9SY1T4j/XXEbOtwmOWqlHMFOqI2Yz3uu8GVtdx9H9XQ0yj2Gy6HbO2wkuzitGuhjSNlVJumFV87npI0yeKc10MGaklpCnocOJ9pl27ag0pY9Yn3jSncqb2iL+uzScSBhqttt/e30DLLfquah5jcWQ2N9ub+Lg9Le5DkaMyaDdulUf4yRRb+dKYDrCkPBVfKD4YlZ8BX+NYcc3u9e+b8d/6A8BzVur0abPMAAAAAElFTkSuQmCC">
                                 +96555133297
                             </a>
                         </div>
@@ -176,7 +184,7 @@
                             <h2>خدمة الجوانب السرية من الألمنيوم</h2>
 
                             <a href="tel:+96555133297" class="button">
-                                <i class='fa fa-phone' style="font-size:20"></i>
+                                <img width="35" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEElEQVR4nO3ZzYtNYRzA8Z/XUWJDGKJk5WUpWUrsyEYUNanBn6D8BbLDCv+BxcR4jSxQkxoLRnmLImXl5UZIqI9OcxY3Zu7c59zuuc9kPn/B/fac+5zn+Z2IGTN6B3swii94gK0xnWAezvpXA6tiOsAiXDe5a5E7rMQTUxuIXGE5XmjPJ/RHbjAfI9IMR25wXDUHIyd4UzHkA1ZELvBVdUORC7zUmf2RAwx1GPI8coCjHYZ8jxxgGX53EHI/coHbHYQM5HbSreIRZkcuMAtjFUJ2Rm6wLzHicuTI+KrcSwgZjFxhI34mnILXRa5wMmFVHmJh5Ah95Q9sV7F190WOsAHfEmIuYm7kCEekOV9sGJEjE09TWjkVGY+G7iTGnM5yZYwPJl5VeMzmRG6wBm8TYy5hQeQGm/AxMebmRO+ZYrVwqBzF/sKz4ohUZ8yWchacYqz5BIDtLd5TV4pBYV0xO/AjMaY4zgziapvTmQN13l9SY1T4j/XXEbOtwmOWqlHMFOqI2Yz3uu8GVtdx9H9XQ0yj2Gy6HbO2wkuzitGuhjSNlVJumFV87npI0yeKc10MGaklpCnocOJ9pl27ag0pY9Yn3jSncqb2iL+uzScSBhqttt/e30DLLfquah5jcWQ2N9ub+Lg9Le5DkaMyaDdulUf4yRRb+dKYDrCkPBVfKD4YlZ8BX+NYcc3u9e+b8d/6A8BzVur0abPMAAAAAElFTkSuQmCC">
                                 +96555133297
                             </a>
                         </div>
@@ -187,7 +195,7 @@
                             <h2>خدمة لوحات الجدران من الألمنيوم</h2>
 
                             <a href="tel:+96555133297" class="button">
-                                <i class='fa fa-phone' style="font-size:20"></i>
+                                <img width="35" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEElEQVR4nO3ZzYtNYRzA8Z/XUWJDGKJk5WUpWUrsyEYUNanBn6D8BbLDCv+BxcR4jSxQkxoLRnmLImXl5UZIqI9OcxY3Zu7c59zuuc9kPn/B/fac+5zn+Z2IGTN6B3swii94gK0xnWAezvpXA6tiOsAiXDe5a5E7rMQTUxuIXGE5XmjPJ/RHbjAfI9IMR25wXDUHIyd4UzHkA1ZELvBVdUORC7zUmf2RAwx1GPI8coCjHYZ8jxxgGX53EHI/coHbHYQM5HbSreIRZkcuMAtjFUJ2Rm6wLzHicuTI+KrcSwgZjFxhI34mnILXRa5wMmFVHmJh5Ah95Q9sV7F190WOsAHfEmIuYm7kCEekOV9sGJEjE09TWjkVGY+G7iTGnM5yZYwPJl5VeMzmRG6wBm8TYy5hQeQGm/AxMebmRO+ZYrVwqBzF/sKz4ohUZ8yWchacYqz5BIDtLd5TV4pBYV0xO/AjMaY4zgziapvTmQN13l9SY1T4j/XXEbOtwmOWqlHMFOqI2Yz3uu8GVtdx9H9XQ0yj2Gy6HbO2wkuzitGuhjSNlVJumFV87npI0yeKc10MGaklpCnocOJ9pl27ag0pY9Yn3jSncqb2iL+uzScSBhqttt/e30DLLfquah5jcWQ2N9ub+Lg9Le5DkaMyaDdulUf4yRRb+dKYDrCkPBVfKD4YlZ8BX+NYcc3u9e+b8d/6A8BzVur0abPMAAAAAElFTkSuQmCC">
                                 +96555133297
                             </a>
                         </div>
@@ -198,7 +206,7 @@
                             <h2>خدمات إصلاح الألمنيوم المحترفة</h2>
 
                             <a href="tel:+96555133297" class="button">
-                                <i class='fa fa-phone' style="font-size:20"></i>
+                                <img width="35" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEElEQVR4nO3ZzYtNYRzA8Z/XUWJDGKJk5WUpWUrsyEYUNanBn6D8BbLDCv+BxcR4jSxQkxoLRnmLImXl5UZIqI9OcxY3Zu7c59zuuc9kPn/B/fac+5zn+Z2IGTN6B3swii94gK0xnWAezvpXA6tiOsAiXDe5a5E7rMQTUxuIXGE5XmjPJ/RHbjAfI9IMR25wXDUHIyd4UzHkA1ZELvBVdUORC7zUmf2RAwx1GPI8coCjHYZ8jxxgGX53EHI/coHbHYQM5HbSreIRZkcuMAtjFUJ2Rm6wLzHicuTI+KrcSwgZjFxhI34mnILXRa5wMmFVHmJh5Ah95Q9sV7F190WOsAHfEmIuYm7kCEekOV9sGJEjE09TWjkVGY+G7iTGnM5yZYwPJl5VeMzmRG6wBm8TYy5hQeQGm/AxMebmRO+ZYrVwqBzF/sKz4ohUZ8yWchacYqz5BIDtLd5TV4pBYV0xO/AjMaY4zgziapvTmQN13l9SY1T4j/XXEbOtwmOWqlHMFOqI2Yz3uu8GVtdx9H9XQ0yj2Gy6HbO2wkuzitGuhjSNlVJumFV87npI0yeKc10MGaklpCnocOJ9pl27ag0pY9Yn3jSncqb2iL+uzScSBhqttt/e30DLLfquah5jcWQ2N9ub+Lg9Le5DkaMyaDdulUf4yRRb+dKYDrCkPBVfKD4YlZ8BX+NYcc3u9e+b8d/6A8BzVur0abPMAAAAAElFTkSuQmCC">
                                 +96555133297
                             </a>
                         </div>
@@ -444,12 +452,15 @@
 
                         <p>jawadjamil602@gmail.com</p>
                     </li>
+
+                    <li>
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAACT0lEQVR4nO2Wz2sTURDH14v4g/q79cfNkyDoRZAaduZVG/Vgrc1h3sZfCOLFnryIlIIRD/UgRbMzGwgI/gl68weoJ9GCUC/iSaGg4EErIqIHtfJ238ak3RiyXUMPGRjYvOy8z/fNm5nEcbq2VI2Qhwnkg0aZMx49B0c7AJb3MbTmwO8yO4nO2KlZZhJPkrVDQmb+OxQj74Kdbqp16/a4SDtLyzXwhY4WF+Wra03c0J7qqg5XNV8lt9xLyJdrYpCfEsrZohvsPrm3vOaMur2CwN9OSk4Tyn2N/DvrdprxFA+0mo4eBLkk8EwaKAE/O6ZurAunn5IthDKhUV4R8HcN8sM8a+RrxRxva6bmkEZ+0yb4bWFfpS+Egu9p4K9NBaJ88RSTk6Vpl4vm/uw93yU3UKboqH9ypYc+EMqdUADwT0LRDcGmAIoHbm5uF2pizGnsxmM1MShThPy8tj/yJStstgDVrX9Vt3u/wOdsXMn29ZOGLCS0jwZ5aNdLqcGUq+yINuPpcE35+ZZgDPZb0dOpwcO5Wz1RCqM0H1fVTUlgU+nx2qmD11fHhZa6nU64lfVRHH8zn83AqAcTysvodPLaDBqzZt5ZAG63nQh5V32qPVcG68EmAzGclJwP31V+3k69F85ijYCvWDGPHGduWcN3/ZMbNAaj8YDRwPcWFFdqsFvu1SCfbQon5sPnCyTkWSNo0eBwU+SCGQ52hD4mCI6YohoZ5I0a+DAhP7DCfmX+H1y7/og5zT/q4pPn8lCm0NjqfianwvSDfLQTbDzugtj+AM4uGLIet4PQAAAAAElFTkSuQmCC">
+                        <h3>ساعات العمل</h3>
+                        <p>من السبت إلى الجمعة، من الساعة 8:00 صباحًا حتى 11:30 مساءً</p>
+                    </li>
                 </ul>
 
-                <div class="working-hours">
-                    <h3>ساعات العمل</h3>
-                    <p>من السبت إلى الجمعة، من الساعة 8:00 صباحًا حتى 11:30 مساءً</p>
-                </div>
+                
             </div>
         </div>
 
@@ -461,22 +472,460 @@
         
         <div class="call-icons">
                 <a href="tel:+966562336341" class="call-icons-circle phone-icon">
-                    <i class="fa fa-phone"></i>
+                    <!-- <i class="fa fa-phone"></i> -->
+                    <!-- <img width="40px" src="img/phone-icon.webp" alt=""> -->
+                    <img width="35" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEElEQVR4nO3ZzYtNYRzA8Z/XUWJDGKJk5WUpWUrsyEYUNanBn6D8BbLDCv+BxcR4jSxQkxoLRnmLImXl5UZIqI9OcxY3Zu7c59zuuc9kPn/B/fac+5zn+Z2IGTN6B3swii94gK0xnWAezvpXA6tiOsAiXDe5a5E7rMQTUxuIXGE5XmjPJ/RHbjAfI9IMR25wXDUHIyd4UzHkA1ZELvBVdUORC7zUmf2RAwx1GPI8coCjHYZ8jxxgGX53EHI/coHbHYQM5HbSreIRZkcuMAtjFUJ2Rm6wLzHicuTI+KrcSwgZjFxhI34mnILXRa5wMmFVHmJh5Ah95Q9sV7F190WOsAHfEmIuYm7kCEekOV9sGJEjE09TWjkVGY+G7iTGnM5yZYwPJl5VeMzmRG6wBm8TYy5hQeQGm/AxMebmRO+ZYrVwqBzF/sKz4ohUZ8yWchacYqz5BIDtLd5TV4pBYV0xO/AjMaY4zgziapvTmQN13l9SY1T4j/XXEbOtwmOWqlHMFOqI2Yz3uu8GVtdx9H9XQ0yj2Gy6HbO2wkuzitGuhjSNlVJumFV87npI0yeKc10MGaklpCnocOJ9pl27ag0pY9Yn3jSncqb2iL+uzScSBhqttt/e30DLLfquah5jcWQ2N9ub+Lg9Le5DkaMyaDdulUf4yRRb+dKYDrCkPBVfKD4YlZ8BX+NYcc3u9e+b8d/6A8BzVur0abPMAAAAAElFTkSuQmCC">
                 </a>
                 <a href="https://wa.me/+966562336341" class="call-icons-circle whatsapp-icon">
-                    <i class="fab fa-whatsapp"></i>
+                    <!-- <i class="fab fa-whatsapp"></i> -->
+                    <!-- <img width="40px" src="img/whatsapp.webp" alt=""> -->
+                    <img width="35" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAACWklEQVR4nO2WT4iNYRTGr7mkMEwRKQlTmAlZWUg0Q4mtvzGy0GQxCyZ/RspK07DQzBbJLEVEhqS7IEX+bBETCzWhUf4LMT8dnns7fd253/t+WM19Vve+7/Oc83zv955zvlyuiioiAEwHdgJ9wGPgA/AZ6AeuA7uB2f8j8WTgCPCVdPwEzgJz/lXyZuCNC34Z2AEsAKYAk4AGYKsSfxf3E7Dub5NvcwELwMIATT1wXpohYG/W5CuAbwp0FKiJ1O/TiQ1FnwRQB7xW8mOx5hMmiq9jZoywS8JbQF5reQU8GHMawAXF6g0V1Kq07OiWuPVD7qavjTBQr3v0A5gVIthYfPrE+ktnoC/UgLRWHYZdIeRekUu3FxiV6AFfgNERBlqkuxZCvinyysT6HWegPTS5tNYnDP0h5KciNyTWNzkDqzNU1e9qCCE/E3lemb2L2nsBzIhs5Yb3IeS7IjeV2ZuoIWR46E3ab+CAJSujWyTNoxADJ0XuqFBWz8Wxcu0A5rpX91Gds3RJgVbtXQoxsFnkeylj+QHDw1pwreNf0XpriIHxwDsJllfgjdHTFyelxznHWyxDNlempRowAIcVqJBLATAWWA8cB84A24vHr/Z9Q7F60mKVAOyP6t/DwAaZ4gzat0OMsCDhloyJ8/qCQnOgKUY8Tm3X3ttUYD7QBpyudCecfqnrmvbeW2Ldr3HigTIX7L7qvVnmGoFVupC3He8VsCwquQHoTiQc1DTrAd6SDusNnda0clnAn054FdijEqpJlOgG4ISe1tr2Ew2wU6qGCZkS+/ou/aliJOAXHxdFslvKXn4AAAAASUVORK5CYII=">
+
                 </a>
         </div>
     </div>
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <div style="display: none;" id="lower-container" class="main-container">
+        <header>
+            <div class="inner-container header-content">
+                <h1 class="logo">
+                    <a href="/">
+                        <img src="img/logo.WebP" alt="">
+                        <span class="text">
+                            <span>Aluminum Masters</span>
+                            <span>Company</span>
+                        </span>
+                    </a>
+                </h1>
+        
+                <ul class="main-menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#service">Service</a></li>
+                    <li><a href="#about">Contact</a></li>
+                    <li><a href="#contact">About</a></li>
+                    <li><a class="toggleButton">English</a></li>
+        
+                    <!-- <span class="seperator desktop-none"></span> -->
+        
+                    <!-- <li class="desktop-none lang-item">
+                        <a class="toggleButton">
+                            English
+        
+                            <i class="fa fa-check"></i>
+                        </a>
+                    </li>
+                    <li class="desktop-none lang-item">
+                        <a>
+                            Arabic
+        
+                            <i class="fa fa-check"></i>
+                        </a>
+                    </li> -->
+                </ul>
+        
+                <span class="mobile-menu-button" (click)="toggleMobileMenu()">
+                    <!-- <span class="material-symbols-outlined">
+                        menu
+                    </span> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+                </span>
+            </div>
+        </header>
+        
+        <!-- <select class="lang-dropdown" [(ngModel)]="selectedOption" (change)="switchLanguage()">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+        </select> -->
+        
+  
+
+    <div class="banner-container">
+        <div class="banner-content">
+            <span class="overlay"></span>
+            <div class="banner-slider-container">
+                <div class="single-banner-slider banner-slider-1">
+                    <div class="banner-data">
+                        <h2>Professional Aluminum Door Installation Service</h2>
+
+                        <a href="tel:+96555133297" class="button">
+                            <img width="35" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEElEQVR4nO3ZzYtNYRzA8Z/XUWJDGKJk5WUpWUrsyEYUNanBn6D8BbLDCv+BxcR4jSxQkxoLRnmLImXl5UZIqI9OcxY3Zu7c59zuuc9kPn/B/fac+5zn+Z2IGTN6B3swii94gK0xnWAezvpXA6tiOsAiXDe5a5E7rMQTUxuIXGE5XmjPJ/RHbjAfI9IMR25wXDUHIyd4UzHkA1ZELvBVdUORC7zUmf2RAwx1GPI8coCjHYZ8jxxgGX53EHI/coHbHYQM5HbSreIRZkcuMAtjFUJ2Rm6wLzHicuTI+KrcSwgZjFxhI34mnILXRa5wMmFVHmJh5Ah95Q9sV7F190WOsAHfEmIuYm7kCEekOV9sGJEjE09TWjkVGY+G7iTGnM5yZYwPJl5VeMzmRG6wBm8TYy5hQeQGm/AxMebmRO+ZYrVwqBzF/sKz4ohUZ8yWchacYqz5BIDtLd5TV4pBYV0xO/AjMaY4zgziapvTmQN13l9SY1T4j/XXEbOtwmOWqlHMFOqI2Yz3uu8GVtdx9H9XQ0yj2Gy6HbO2wkuzitGuhjSNlVJumFV87npI0yeKc10MGaklpCnocOJ9pl27ag0pY9Yn3jSncqb2iL+uzScSBhqttt/e30DLLfquah5jcWQ2N9ub+Lg9Le5DkaMyaDdulUf4yRRb+dKYDrCkPBVfKD4YlZ8BX+NYcc3u9e+b8d/6A8BzVur0abPMAAAAAElFTkSuQmCC">
+                            +96555133297
+                        </a>
+                    </div>
+                </div>
+
+                <div class="single-banner-slider banner-slider-2">
+                    <div class="banner-data">
+                        <h2>Professional Aluminum Window Installation Service</h2>
+
+                        <a href="tel:+96555133297" class="button">
+                            <img width="35" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEElEQVR4nO3ZzYtNYRzA8Z/XUWJDGKJk5WUpWUrsyEYUNanBn6D8BbLDCv+BxcR4jSxQkxoLRnmLImXl5UZIqI9OcxY3Zu7c59zuuc9kPn/B/fac+5zn+Z2IGTN6B3swii94gK0xnWAezvpXA6tiOsAiXDe5a5E7rMQTUxuIXGE5XmjPJ/RHbjAfI9IMR25wXDUHIyd4UzHkA1ZELvBVdUORC7zUmf2RAwx1GPI8coCjHYZ8jxxgGX53EHI/coHbHYQM5HbSreIRZkcuMAtjFUJ2Rm6wLzHicuTI+KrcSwgZjFxhI34mnILXRa5wMmFVHmJh5Ah95Q9sV7F190WOsAHfEmIuYm7kCEekOV9sGJEjE09TWjkVGY+G7iTGnM5yZYwPJl5VeMzmRG6wBm8TYy5hQeQGm/AxMebmRO+ZYrVwqBzF/sKz4ohUZ8yWchacYqz5BIDtLd5TV4pBYV0xO/AjMaY4zgziapvTmQN13l9SY1T4j/XXEbOtwmOWqlHMFOqI2Yz3uu8GVtdx9H9XQ0yj2Gy6HbO2wkuzitGuhjSNlVJumFV87npI0yeKc10MGaklpCnocOJ9pl27ag0pY9Yn3jSncqb2iL+uzScSBhqttt/e30DLLfquah5jcWQ2N9ub+Lg9Le5DkaMyaDdulUf4yRRb+dKYDrCkPBVfKD4YlZ8BX+NYcc3u9e+b8d/6A8BzVur0abPMAAAAAElFTkSuQmCC">
+                            +96555133297
+                        </a>
+                    </div>
+                </div>
+
+                <div class="single-banner-slider banner-slider-3">
+                    <div class="banner-data">
+                        <h2>Professional Aluminum Handrail Installation Service</h2>
+
+                        <a href="tel:+96555133297" class="button">
+                            <img width="35" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEElEQVR4nO3ZzYtNYRzA8Z/XUWJDGKJk5WUpWUrsyEYUNanBn6D8BbLDCv+BxcR4jSxQkxoLRnmLImXl5UZIqI9OcxY3Zu7c59zuuc9kPn/B/fac+5zn+Z2IGTN6B3swii94gK0xnWAezvpXA6tiOsAiXDe5a5E7rMQTUxuIXGE5XmjPJ/RHbjAfI9IMR25wXDUHIyd4UzHkA1ZELvBVdUORC7zUmf2RAwx1GPI8coCjHYZ8jxxgGX53EHI/coHbHYQM5HbSreIRZkcuMAtjFUJ2Rm6wLzHicuTI+KrcSwgZjFxhI34mnILXRa5wMmFVHmJh5Ah95Q9sV7F190WOsAHfEmIuYm7kCEekOV9sGJEjE09TWjkVGY+G7iTGnM5yZYwPJl5VeMzmRG6wBm8TYy5hQeQGm/AxMebmRO+ZYrVwqBzF/sKz4ohUZ8yWchacYqz5BIDtLd5TV4pBYV0xO/AjMaY4zgziapvTmQN13l9SY1T4j/XXEbOtwmOWqlHMFOqI2Yz3uu8GVtdx9H9XQ0yj2Gy6HbO2wkuzitGuhjSNlVJumFV87npI0yeKc10MGaklpCnocOJ9pl27ag0pY9Yn3jSncqb2iL+uzScSBhqttt/e30DLLfquah5jcWQ2N9ub+Lg9Le5DkaMyaDdulUf4yRRb+dKYDrCkPBVfKD4YlZ8BX+NYcc3u9e+b8d/6A8BzVur0abPMAAAAAElFTkSuQmCC">
+                            +96555133297
+                        </a>
+                    </div>
+                </div>
+
+                <div class="single-banner-slider banner-slider-4">
+                    <div class="banner-data">
+                        <h2>Professional Aluminum Kitchen Design Service</h2>
+
+                        <a href="tel:+96555133297" class="button">
+                            <img width="35" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEElEQVR4nO3ZzYtNYRzA8Z/XUWJDGKJk5WUpWUrsyEYUNanBn6D8BbLDCv+BxcR4jSxQkxoLRnmLImXl5UZIqI9OcxY3Zu7c59zuuc9kPn/B/fac+5zn+Z2IGTN6B3swii94gK0xnWAezvpXA6tiOsAiXDe5a5E7rMQTUxuIXGE5XmjPJ/RHbjAfI9IMR25wXDUHIyd4UzHkA1ZELvBVdUORC7zUmf2RAwx1GPI8coCjHYZ8jxxgGX53EHI/coHbHYQM5HbSreIRZkcuMAtjFUJ2Rm6wLzHicuTI+KrcSwgZjFxhI34mnILXRa5wMmFVHmJh5Ah95Q9sV7F190WOsAHfEmIuYm7kCEekOV9sGJEjE09TWjkVGY+G7iTGnM5yZYwPJl5VeMzmRG6wBm8TYy5hQeQGm/AxMebmRO+ZYrVwqBzF/sKz4ohUZ8yWchacYqz5BIDtLd5TV4pBYV0xO/AjMaY4zgziapvTmQN13l9SY1T4j/XXEbOtwmOWqlHMFOqI2Yz3uu8GVtdx9H9XQ0yj2Gy6HbO2wkuzitGuhjSNlVJumFV87npI0yeKc10MGaklpCnocOJ9pl27ag0pY9Yn3jSncqb2iL+uzScSBhqttt/e30DLLfquah5jcWQ2N9ub+Lg9Le5DkaMyaDdulUf4yRRb+dKYDrCkPBVfKD4YlZ8BX+NYcc3u9e+b8d/6A8BzVur0abPMAAAAAElFTkSuQmCC">
+                            +96555133297
+                        </a>
+                    </div>
+                </div>
+
+                <div class="single-banner-slider banner-slider-5">
+                    <div class="banner-data">
+                        <h2>Professional Aluminum Shutter Service</h2>
+
+                        <a href="tel:+96555133297" class="button">
+                            <img width="35" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEElEQVR4nO3ZzYtNYRzA8Z/XUWJDGKJk5WUpWUrsyEYUNanBn6D8BbLDCv+BxcR4jSxQkxoLRnmLImXl5UZIqI9OcxY3Zu7c59zuuc9kPn/B/fac+5zn+Z2IGTN6B3swii94gK0xnWAezvpXA6tiOsAiXDe5a5E7rMQTUxuIXGE5XmjPJ/RHbjAfI9IMR25wXDUHIyd4UzHkA1ZELvBVdUORC7zUmf2RAwx1GPI8coCjHYZ8jxxgGX53EHI/coHbHYQM5HbSreIRZkcuMAtjFUJ2Rm6wLzHicuTI+KrcSwgZjFxhI34mnILXRa5wMmFVHmJh5Ah95Q9sV7F190WOsAHfEmIuYm7kCEekOV9sGJEjE09TWjkVGY+G7iTGnM5yZYwPJl5VeMzmRG6wBm8TYy5hQeQGm/AxMebmRO+ZYrVwqBzF/sKz4ohUZ8yWchacYqz5BIDtLd5TV4pBYV0xO/AjMaY4zgziapvTmQN13l9SY1T4j/XXEbOtwmOWqlHMFOqI2Yz3uu8GVtdx9H9XQ0yj2Gy6HbO2wkuzitGuhjSNlVJumFV87npI0yeKc10MGaklpCnocOJ9pl27ag0pY9Yn3jSncqb2iL+uzScSBhqttt/e30DLLfquah5jcWQ2N9ub+Lg9Le5DkaMyaDdulUf4yRRb+dKYDrCkPBVfKD4YlZ8BX+NYcc3u9e+b8d/6A8BzVur0abPMAAAAAElFTkSuQmCC">
+                            +96555133297
+                        </a>
+                    </div>
+                </div>
+
+                <div class="single-banner-slider banner-slider-6">
+                    <div class="banner-data">
+                        <h2>Professional Aluminum Double Action Doors</h2>
+
+                        <a href="tel:+96555133297" class="button">
+                            <img width="35" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEElEQVR4nO3ZzYtNYRzA8Z/XUWJDGKJk5WUpWUrsyEYUNanBn6D8BbLDCv+BxcR4jSxQkxoLRnmLImXl5UZIqI9OcxY3Zu7c59zuuc9kPn/B/fac+5zn+Z2IGTN6B3swii94gK0xnWAezvpXA6tiOsAiXDe5a5E7rMQTUxuIXGE5XmjPJ/RHbjAfI9IMR25wXDUHIyd4UzHkA1ZELvBVdUORC7zUmf2RAwx1GPI8coCjHYZ8jxxgGX53EHI/coHbHYQM5HbSreIRZkcuMAtjFUJ2Rm6wLzHicuTI+KrcSwgZjFxhI34mnILXRa5wMmFVHmJh5Ah95Q9sV7F190WOsAHfEmIuYm7kCEekOV9sGJEjE09TWjkVGY+G7iTGnM5yZYwPJl5VeMzmRG6wBm8TYy5hQeQGm/AxMebmRO+ZYrVwqBzF/sKz4ohUZ8yWchacYqz5BIDtLd5TV4pBYV0xO/AjMaY4zgziapvTmQN13l9SY1T4j/XXEbOtwmOWqlHMFOqI2Yz3uu8GVtdx9H9XQ0yj2Gy6HbO2wkuzitGuhjSNlVJumFV87npI0yeKc10MGaklpCnocOJ9pl27ag0pY9Yn3jSncqb2iL+uzScSBhqttt/e30DLLfquah5jcWQ2N9ub+Lg9Le5DkaMyaDdulUf4yRRb+dKYDrCkPBVfKD4YlZ8BX+NYcc3u9e+b8d/6A8BzVur0abPMAAAAAElFTkSuQmCC">
+                            +96555133297
+                        </a>
+                    </div>
+                </div>
+
+                <div class="single-banner-slider banner-slider-7">
+                    <div class="banner-data">
+                        <h2>Professional Aluminum Chimney Service</h2>
+
+                        <a href="tel:+96555133297" class="button">
+                            <img width="35" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEElEQVR4nO3ZzYtNYRzA8Z/XUWJDGKJk5WUpWUrsyEYUNanBn6D8BbLDCv+BxcR4jSxQkxoLRnmLImXl5UZIqI9OcxY3Zu7c59zuuc9kPn/B/fac+5zn+Z2IGTN6B3swii94gK0xnWAezvpXA6tiOsAiXDe5a5E7rMQTUxuIXGE5XmjPJ/RHbjAfI9IMR25wXDUHIyd4UzHkA1ZELvBVdUORC7zUmf2RAwx1GPI8coCjHYZ8jxxgGX53EHI/coHbHYQM5HbSreIRZkcuMAtjFUJ2Rm6wLzHicuTI+KrcSwgZjFxhI34mnILXRa5wMmFVHmJh5Ah95Q9sV7F190WOsAHfEmIuYm7kCEekOV9sGJEjE09TWjkVGY+G7iTGnM5yZYwPJl5VeMzmRG6wBm8TYy5hQeQGm/AxMebmRO+ZYrVwqBzF/sKz4ohUZ8yWchacYqz5BIDtLd5TV4pBYV0xO/AjMaY4zgziapvTmQN13l9SY1T4j/XXEbOtwmOWqlHMFOqI2Yz3uu8GVtdx9H9XQ0yj2Gy6HbO2wkuzitGuhjSNlVJumFV87npI0yeKc10MGaklpCnocOJ9pl27ag0pY9Yn3jSncqb2iL+uzScSBhqttt/e30DLLfquah5jcWQ2N9ub+Lg9Le5DkaMyaDdulUf4yRRb+dKYDrCkPBVfKD4YlZ8BX+NYcc3u9e+b8d/6A8BzVur0abPMAAAAAElFTkSuQmCC">
+                            +96555133297
+                        </a>
+                    </div>
+                </div>
+
+                <div class="single-banner-slider banner-slider-8">
+                    <div class="banner-data">
+                        <h2>Professional Aluminum Jam Secret Solutions</h2>
+
+                        <a href="tel:+96555133297" class="button">
+                            <img width="35" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEElEQVR4nO3ZzYtNYRzA8Z/XUWJDGKJk5WUpWUrsyEYUNanBn6D8BbLDCv+BxcR4jSxQkxoLRnmLImXl5UZIqI9OcxY3Zu7c59zuuc9kPn/B/fac+5zn+Z2IGTN6B3swii94gK0xnWAezvpXA6tiOsAiXDe5a5E7rMQTUxuIXGE5XmjPJ/RHbjAfI9IMR25wXDUHIyd4UzHkA1ZELvBVdUORC7zUmf2RAwx1GPI8coCjHYZ8jxxgGX53EHI/coHbHYQM5HbSreIRZkcuMAtjFUJ2Rm6wLzHicuTI+KrcSwgZjFxhI34mnILXRa5wMmFVHmJh5Ah95Q9sV7F190WOsAHfEmIuYm7kCEekOV9sGJEjE09TWjkVGY+G7iTGnM5yZYwPJl5VeMzmRG6wBm8TYy5hQeQGm/AxMebmRO+ZYrVwqBzF/sKz4ohUZ8yWchacYqz5BIDtLd5TV4pBYV0xO/AjMaY4zgziapvTmQN13l9SY1T4j/XXEbOtwmOWqlHMFOqI2Yz3uu8GVtdx9H9XQ0yj2Gy6HbO2wkuzitGuhjSNlVJumFV87npI0yeKc10MGaklpCnocOJ9pl27ag0pY9Yn3jSncqb2iL+uzScSBhqttt/e30DLLfquah5jcWQ2N9ub+Lg9Le5DkaMyaDdulUf4yRRb+dKYDrCkPBVfKD4YlZ8BX+NYcc3u9e+b8d/6A8BzVur0abPMAAAAAElFTkSuQmCC">
+                            +96555133297
+                        </a>
+                    </div>
+                </div>
+
+                <div class="single-banner-slider banner-slider-9">
+                    <div class="banner-data">
+                        <h2>Professional Aluminum Repair Services</h2>
+
+                        <a href="tel:+96555133297" class="button">
+                            <img width="35" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEElEQVR4nO3ZzYtNYRzA8Z/XUWJDGKJk5WUpWUrsyEYUNanBn6D8BbLDCv+BxcR4jSxQkxoLRnmLImXl5UZIqI9OcxY3Zu7c59zuuc9kPn/B/fac+5zn+Z2IGTN6B3swii94gK0xnWAezvpXA6tiOsAiXDe5a5E7rMQTUxuIXGE5XmjPJ/RHbjAfI9IMR25wXDUHIyd4UzHkA1ZELvBVdUORC7zUmf2RAwx1GPI8coCjHYZ8jxxgGX53EHI/coHbHYQM5HbSreIRZkcuMAtjFUJ2Rm6wLzHicuTI+KrcSwgZjFxhI34mnILXRa5wMmFVHmJh5Ah95Q9sV7F190WOsAHfEmIuYm7kCEekOV9sGJEjE09TWjkVGY+G7iTGnM5yZYwPJl5VeMzmRG6wBm8TYy5hQeQGm/AxMebmRO+ZYrVwqBzF/sKz4ohUZ8yWchacYqz5BIDtLd5TV4pBYV0xO/AjMaY4zgziapvTmQN13l9SY1T4j/XXEbOtwmOWqlHMFOqI2Yz3uu8GVtdx9H9XQ0yj2Gy6HbO2wkuzitGuhjSNlVJumFV87npI0yeKc10MGaklpCnocOJ9pl27ag0pY9Yn3jSncqb2iL+uzScSBhqttt/e30DLLfquah5jcWQ2N9ub+Lg9Le5DkaMyaDdulUf4yRRb+dKYDrCkPBVfKD4YlZ8BX+NYcc3u9e+b8d/6A8BzVur0abPMAAAAAElFTkSuQmCC">
+                            +96555133297
+                        </a>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="row-content-container" id="key-action">
+        <div class="inner-container row-content">
+            <div class="key-action-container">
+                <div class="single-action">
+                    <span class="action-icons">
+                        <i class="fas fa-paper-plane"></i>
+                    </span>
+                    <h3>Quick Action</h3>
+                </div>
+                <div class="single-action">
+                    <span class="action-icons">
+                        <i class="fas fa-home"></i>
+                    </span>
+                    <h3>InDoor</h3>
+                </div>
+                <div class="single-action">
+                    <span class="action-icons">
+                        <i class="fas fa-building"></i>
+                    </span>
+                    <h3>OutDoor</h3>
+                </div>
+                <div class="single-action">
+                    <span class="action-icons">
+                        <i class="far fa-clock"></i>
+                    </span>
+                    <h3>Available all Week</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row-content-container colored-row-content-container" id="service">
+        <div class="inner-container row-content">
+            <h2>Services</h2>
+            <div class="services-container">
+                <!-- 1 -->
+                <div class="single-service">
+                    <div class="service-img">
+                        <img src="img/a_doors.webp" alt="">
+                    </div>
+
+                    <div class="service-content">
+                        <h3>Aluminum Door Installation Service</h3>
+
+                        <p>Welcome to Al-Barakat Aluminum Co., where we bring innovation and style to your doorstep with our exceptional New Aluminum Door Installation Service. Whether you're seeking to enhance your home's curb appeal, upgrade your business premises, or revitalize interior spaces, our expert team is here to provide you with a seamless and transformative experience.</p>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="single-service">
+                    <div class="service-img">
+                        <img src="img/a_windows.webp" alt="">
+                    </div>
+
+                    <div class="service-content">
+                        <h3>Aluminum Window Installation Service</h3>
+
+                        <p>Welcome to Al-Barakat Aluminum Co., where innovation meets elegance in our cutting-edge New Aluminum Window Installation Service. We take pride in offering you a transformative experience that redefines the way you perceive windows. Whether you're renovating your home or upgrading your commercial space, our expert team is here to provide you with windows that marry style and performance seamlessly.</p>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="single-service">
+                    <div class="service-img">
+                        <img src="img/a_handrails.webp" alt="">
+                    </div>
+
+                    <div class="service-content">
+                        <h3>Aluminum Handrail Installation Service</h3>
+
+                        <p>Welcome to Al-Barakat Aluminum Co., where safety meets style in our exceptional Aluminum Handrail Installation Service. Whether you're looking to enhance the accessibility of your property or add a touch of elegance to your surroundings, our expert team is here to provide you with handrails that combine functionality and visual appeal seamlessly.</p>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="single-service">
+                    <div class="service-img">
+                        <img src="img/kitchen_service.webp" alt="">
+                    </div>
+
+                    <div class="service-content">
+                        <h3>Aluminum Kitchen Design Service</h3>
+
+                        <p>Welcome to Al-Barakat Aluminum Co., where innovation meets culinary excellence in our exceptional Aluminum Kitchen Design Service. We understand that the kitchen is the heart of the home, and our expert team is here to provide you with a kitchen that combines aesthetics, functionality, and durability seamlessly. Whether you're looking to revamp your home kitchen or create a modern culinary haven for your restaurant, our service is designed to cater to your unique needs. </p>
+                    </div>
+                </div>
+                <!-- 5 -->
+                <div class="single-service">
+                    <div class="service-img">
+                        <img src="img/shutter_service.webp" alt="">
+                    </div>
+
+                    <div class="service-content">
+                        <h3>Aluminum Shutter Service</h3>
+
+                        <p>Welcome to Al-Barakat Aluminum Co., your destination for premium Aluminum Shutter Service that blend security, aesthetics, and functionality seamlessly. Whether you're looking to secure your property, enhance privacy, or add a touch of elegance to your spaces, our expert team is here to provide you with shutters that deliver on all fronts.</p>
+                    </div>
+                </div>
+                <!-- 6 -->
+                <div class="single-service">
+                    <div class="service-img">
+                        <img src="img/double_door_service.webp" alt="">
+                    </div>
+
+                    <div class="service-content">
+                        <h3>Aluminum Double Action Doors</h3>
+
+                        <p>Welcome to Al-Barakat Aluminum Co., where we bring innovation to your entrances with our exceptional Aluminum Double Action Door solutions. Whether you're managing high-traffic areas, creating seamless indoor-outdoor transitions, or seeking versatile entryways, our expert team is here to provide you with doors that combine flexibility and functionality seamlessly.</p>
+                    </div>
+                </div>
+                <!-- 7 -->
+                <div class="single-service">
+                    <div class="service-img">
+                        <img src="img/a_chimney.webp" alt="">
+                    </div>
+
+                    <div class="service-content">
+                        <h3>Aluminum Chimney Service</h3>
+
+                        <p>Welcome to Al-Barakat Aluminum Co., where we combine technology and design to offer you exceptional Aluminum Chimney Service. Our expert team is dedicated to enhancing your property with state-of-the-art chimney systems that provide efficient ventilation, modern aesthetics, and lasting durability.</p>
+                    </div>
+                </div>
+                <!-- 8 -->
+                <div class="single-service">
+                    <div class="service-img">
+                        <img src="img/jamb_secret.webp" alt="">
+                    </div>
+
+                    <div class="service-content">
+                        <h3>Aluminum Jamb Secret Service</h3>
+
+                        <p>Welcome to Al-Barakat Aluminum Co., where innovation meets sophistication in our exceptional Aluminum Jamb Secret offerings. Whether you're seeking to enhance the aesthetics of your entrances or windows or looking to reinforce the structural integrity of your frames, our expert team is here to provide you with jamb secret solutions that seamlessly combine form and function</p>
+                    </div>
+                </div>
+                <!-- 9 -->
+                <div class="single-service">
+                    <div class="service-img">
+                        <img src="img/cotton-wall2.webp" alt="">
+                    </div>
+
+                    <div class="service-content">
+                        <h3>Aluminum Wall Panels Service</h3>
+
+                        <p>Welcome to Al-Barakat Aluminum Co., where innovation meets design in our exceptional Aluminum Wall Panel offerings. Whether you're aiming to transform interiors or enhance exteriors, our expert team is here to provide you with wall panels that redefine aesthetics and functionality.</p>
+                    </div>
+                </div>
+                <!-- 10 -->
+                <div class="single-service">
+                    <div class="service-img">
+                        <img src="img/a_rapair.webp" alt="">
+                    </div>
+
+                    <div class="service-content">
+                        <h3>Aluminum Repair Services</h3>
+
+                        <p>Welcome to Al-Barakat Aluminum Co., where we specialize in delivering comprehensive Aluminum Repair Services that revive the functionality, beauty, and longevity of your aluminum installations.With years of industry experience, our team possesses a deep understanding of aluminum structures and their repair requirements. We specialize in diagnosing issues and providing effective solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row-content-container" id="feature">
+        <div class="inner-container row-content">
+            <div class="feature-container">
+                <h2>Get Fast and Affordable All Types of Aluminum Works</h2>
+                <div class="feature-grid">
+                    <div class="feature-content">
+                        <p>We specialize in quick and affordable appliance repairs, we extend our expertise to a wide range of aluminum projects, ensuring quality outcomes that won't break the bank.</p>
+                        <p>Similar to our fast appliance repairs, we execute All Types of Aluminum Works promptly. Our team understands the value of time, delivering efficient solutions without compromising on quality.</p>
+                        <p>We believe in affordable excellence. Our All Types of Aluminum Works are designed to offer exceptional value for your investment, providing quality outcomes without excessive costs.</p>
+                    </div>
+                    <div class="feature-img">
+                        <img src="img/all_aluminum.webp" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row-content-container colored-row-content-container" id="contact">
+        <div class="inner-container row-content">
+            <h2>Contact with us</h2>
+
+            <ul>
+                <li>
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10.0556 21.3611C14.0556 29.0904 20.5 35.3994 28.3611 39.3596L34.4722 33.351C35.2222 32.6136 36.3333 32.3678 37.3056 32.6955C40.4167 33.7061 43.7778 34.2523 47.2222 34.2523C48.75 34.2523 50 35.4813 50 36.9835V46.5153C50 48.0175 48.75 49.2465 47.2222 49.2465C21.1389 49.2465 0 28.4622 0 2.81639C0 1.31424 1.25 0.0852051 2.77778 0.0852051H12.5C14.0278 0.0852051 15.2778 1.31424 15.2778 2.81639C15.2778 6.23037 15.8333 9.50779 16.8611 12.5667C17.1667 13.5226 16.9444 14.5878 16.1667 15.3525L10.0556 21.3611Z"
+                            fill="#563E94" />
+                    </svg>
+
+                    <h3>Contact us at</h3>
+
+                    <p class="dir-ltr">+96555133297</p>
+                </li>
+
+                <li>
+                    <svg width="50" height="71" viewBox="0 0 50 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M25 0.370361C11.1786 0.370361 0 11.3614 0 24.951C0 43.3865 25 70.6008 25 70.6008C25 70.6008 50 43.3865 50 24.951C50 11.3614 38.8214 0.370361 25 0.370361ZM25 33.7298C20.0714 33.7298 16.0714 29.7969 16.0714 24.951C16.0714 20.1051 20.0714 16.1722 25 16.1722C29.9286 16.1722 33.9286 20.1051 33.9286 24.951C33.9286 29.7969 29.9286 33.7298 25 33.7298Z"
+                            fill="#563E94" />
+                    </svg>
+
+                    <h3>Address</h3>
+
+                    <p style="font-size: 18px;">Al-Rai Behind Commercial Bank</p>
+                </li>
+
+                <li>
+                    <svg width="50" height="41" viewBox="0 0 50 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M45 0.950928H5C2.25 0.950928 0.025 3.16319 0.025 5.86706L0 35.3638C0 38.0677 2.25 40.28 5 40.28H45C47.75 40.28 50 38.0677 50 35.3638V5.86706C50 3.16319 47.75 0.950928 45 0.950928ZM45 10.7832L25 23.0735L5 10.7832V5.86706L25 18.1574L45 5.86706V10.7832Z"
+                            fill="#563E94" />
+                    </svg>
+
+                    <h3>Email</h3>
+
+                    <p>jawadjamil602@gmail.com</p>
+                </li>
+
+                <li>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAACT0lEQVR4nO2Wz2sTURDH14v4g/q79cfNkyDoRZAaduZVG/Vgrc1h3sZfCOLFnryIlIIRD/UgRbMzGwgI/gl68weoJ9GCUC/iSaGg4EErIqIHtfJ238ak3RiyXUMPGRjYvOy8z/fNm5nEcbq2VI2Qhwnkg0aZMx49B0c7AJb3MbTmwO8yO4nO2KlZZhJPkrVDQmb+OxQj74Kdbqp16/a4SDtLyzXwhY4WF+Wra03c0J7qqg5XNV8lt9xLyJdrYpCfEsrZohvsPrm3vOaMur2CwN9OSk4Tyn2N/DvrdprxFA+0mo4eBLkk8EwaKAE/O6ZurAunn5IthDKhUV4R8HcN8sM8a+RrxRxva6bmkEZ+0yb4bWFfpS+Egu9p4K9NBaJ88RSTk6Vpl4vm/uw93yU3UKboqH9ypYc+EMqdUADwT0LRDcGmAIoHbm5uF2pizGnsxmM1MShThPy8tj/yJStstgDVrX9Vt3u/wOdsXMn29ZOGLCS0jwZ5aNdLqcGUq+yINuPpcE35+ZZgDPZb0dOpwcO5Wz1RCqM0H1fVTUlgU+nx2qmD11fHhZa6nU64lfVRHH8zn83AqAcTysvodPLaDBqzZt5ZAG63nQh5V32qPVcG68EmAzGclJwP31V+3k69F85ijYCvWDGPHGduWcN3/ZMbNAaj8YDRwPcWFFdqsFvu1SCfbQon5sPnCyTkWSNo0eBwU+SCGQ52hD4mCI6YohoZ5I0a+DAhP7DCfmX+H1y7/og5zT/q4pPn8lCm0NjqfianwvSDfLQTbDzugtj+AM4uGLIet4PQAAAAAElFTkSuQmCC">
+                    <h3>Working hours</h3>
+                    <p>From Saturday to Friday, from 8:00 AM to 11:30 PM.</p>
+                </li>
+            </ul>
+
+            
+        </div>
+    </div>
+
+    <footer>
+        <div class="inner-container footer-content">
+            <p>All Rights Reserved by Al-Barakat Aluminum Co.</p>
+        </div>
+    </footer>
+    
+    <div class="call-icons">
+            <a href="tel:+966562336341" class="call-icons-circle phone-icon">
+                <!-- <i class="fa fa-phone"></i> -->
+                <!-- <img width="40px" src="img/phone-icon.webp" alt=""> -->
+                <img width="35" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEElEQVR4nO3ZzYtNYRzA8Z/XUWJDGKJk5WUpWUrsyEYUNanBn6D8BbLDCv+BxcR4jSxQkxoLRnmLImXl5UZIqI9OcxY3Zu7c59zuuc9kPn/B/fac+5zn+Z2IGTN6B3swii94gK0xnWAezvpXA6tiOsAiXDe5a5E7rMQTUxuIXGE5XmjPJ/RHbjAfI9IMR25wXDUHIyd4UzHkA1ZELvBVdUORC7zUmf2RAwx1GPI8coCjHYZ8jxxgGX53EHI/coHbHYQM5HbSreIRZkcuMAtjFUJ2Rm6wLzHicuTI+KrcSwgZjFxhI34mnILXRa5wMmFVHmJh5Ah95Q9sV7F190WOsAHfEmIuYm7kCEekOV9sGJEjE09TWjkVGY+G7iTGnM5yZYwPJl5VeMzmRG6wBm8TYy5hQeQGm/AxMebmRO+ZYrVwqBzF/sKz4ohUZ8yWchacYqz5BIDtLd5TV4pBYV0xO/AjMaY4zgziapvTmQN13l9SY1T4j/XXEbOtwmOWqlHMFOqI2Yz3uu8GVtdx9H9XQ0yj2Gy6HbO2wkuzitGuhjSNlVJumFV87npI0yeKc10MGaklpCnocOJ9pl27ag0pY9Yn3jSncqb2iL+uzScSBhqttt/e30DLLfquah5jcWQ2N9ub+Lg9Le5DkaMyaDdulUf4yRRb+dKYDrCkPBVfKD4YlZ8BX+NYcc3u9e+b8d/6A8BzVur0abPMAAAAAElFTkSuQmCC">
+            </a>
+            <a href="https://wa.me/+966562336341" class="call-icons-circle whatsapp-icon">
+                <!-- <i class="fab fa-whatsapp"></i> -->
+                <!-- <img width="40px" src="img/whatsapp.webp" alt=""> -->
+                <img width="35" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAACWklEQVR4nO2WT4iNYRTGr7mkMEwRKQlTmAlZWUg0Q4mtvzGy0GQxCyZ/RspK07DQzBbJLEVEhqS7IEX+bBETCzWhUf4LMT8dnns7fd253/t+WM19Vve+7/Oc83zv955zvlyuiioiAEwHdgJ9wGPgA/AZ6AeuA7uB2f8j8WTgCPCVdPwEzgJz/lXyZuCNC34Z2AEsAKYAk4AGYKsSfxf3E7Dub5NvcwELwMIATT1wXpohYG/W5CuAbwp0FKiJ1O/TiQ1FnwRQB7xW8mOx5hMmiq9jZoywS8JbQF5reQU8GHMawAXF6g0V1Kq07OiWuPVD7qavjTBQr3v0A5gVIthYfPrE+ktnoC/UgLRWHYZdIeRekUu3FxiV6AFfgNERBlqkuxZCvinyysT6HWegPTS5tNYnDP0h5KciNyTWNzkDqzNU1e9qCCE/E3lemb2L2nsBzIhs5Yb3IeS7IjeV2ZuoIWR46E3ab+CAJSujWyTNoxADJ0XuqFBWz8Wxcu0A5rpX91Gds3RJgVbtXQoxsFnkeylj+QHDw1pwreNf0XpriIHxwDsJllfgjdHTFyelxznHWyxDNlempRowAIcVqJBLATAWWA8cB84A24vHr/Z9Q7F60mKVAOyP6t/DwAaZ4gzat0OMsCDhloyJ8/qCQnOgKUY8Tm3X3ttUYD7QBpyudCecfqnrmvbeW2Ldr3HigTIX7L7qvVnmGoFVupC3He8VsCwquQHoTiQc1DTrAd6SDusNnda0clnAn054FdijEqpJlOgG4ISe1tr2Ew2wU6qGCZkS+/ou/aliJOAXHxdFslvKXn4AAAAASUVORK5CYII=">
+
+            </a>
+    </div>
+</div>
+
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+    
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" crossorigin="anonymous"
         referrerpolicy="no-referrer"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script>
+         $(document).ready(function() {
+    const upperHalf = $('#upper-container');
+    const lowerHalf = $('#lower-container');
+    const toggleButton = $('.toggleButton');
+
+    let isUpperVisible = true;
+
+    toggleButton.click(function() {
+      if (isUpperVisible) {
+        upperHalf.css('display', 'none');
+        lowerHalf.css('display', 'block');
+        toggleButton.html('Arabic');
+      } else {
+        upperHalf.css('display', 'block');
+        lowerHalf.css('display', 'none');
+        toggleButton.html('English');
+      }
+      isUpperVisible = !isUpperVisible;
+    });
+  });
         $(document).ready(function () {
             $(".mobile-menu-button").on("click", function () {
                 if ($("ul.main-menu").hasClass("show")) {

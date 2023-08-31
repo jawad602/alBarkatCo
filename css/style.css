@@ -691,9 +691,12 @@ a.button i, button.button i {
   }
 }
 .main-container .call-icons a.call-icons-circle {
-  display: block;
+  /* display: block; */
   width: 55px;
   height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   position: relative;
 }
