@@ -1,9 +1,33 @@
+@font-face {
+  font-family: 'Rubik-Light';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(../fonts/static/Rubik-Light.ttf);
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+@font-face {
+  font-family: 'Rubik-Regular';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(../fonts/static/Rubik-Regular.ttf);
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+@font-face {
+  font-family: 'Rubik-SemiBold';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(../fonts/static/Rubik-SemiBold.ttf);
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   color: #563E94;
-  font-family: "Rubik", sans-serif;
+  font-family: "Rubik-SemiBold","Rubik-Regular","Rubik-Light", sans-serif;
 }
 
 html {
